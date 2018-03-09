@@ -1,0 +1,66 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn test
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.7.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "protractor-ts-starter",
+    "version": "1.0.0",
+    "description": "Starter project for Protractor+Typescript Web Testing",
+    "main": "index.js",
+    "dependencies": {
+      "@types/jasmine": "^2.8.6",
+      "@types/node": "^9.4.6",
+      "jasmine": "^3.1.0",
+      "protractor": "^5.3.0"
+    },
+    "devDependencies": {
+      "@types/jasminewd2": "^2.0.3",
+      "ts-node": "^5.0.1"
+    },
+    "scripts": {
+      "tsc": "tsc",
+      "pretest": "npm run tsc",
+      "test": "protractor",
+      "ctest": "protractor",
+      "debug": "node --inspect-brk ./node_modules/.bin/protractor asyncAwait/conf.js"
+    },
+    "keywords": [
+      "Protractor",
+      "Typescript"
+    ],
+    "author": "Marcos Tenrero",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c protractor
+  Directory: /Users/marcostenrero/git/protractor-ts-starter
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:127:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
